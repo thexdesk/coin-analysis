@@ -22,11 +22,14 @@
     "sprintf": "^0.1.5",
     "talib": "^1.0.3",
     "technicalindicators": "^1.0.20",
-    "winston": "^2.3.1"
+    "winston": "^2.3.1",
+    "@snyk/protect": "latest"
   },
   "scripts": {
     "start": "node index.js",
-    "cypress:open": "cypress open"
+    "cypress:open": "cypress open",
+    "prepare": "yarn run snyk-protect",
+    "snyk-protect": "snyk-protect"
   },
   "devDependencies": {
     "babel": "^6.23.0",
@@ -36,5 +39,6 @@
     "babel-plugin-transform-async-to-generator": "^6.24.1",
     "babel-plugin-transform-class-properties": "^6.24.1",
     "cypress": "^2.1.0"
-  }
+  },
+  "snyk": true
 }
